@@ -15,3 +15,6 @@ dependencyResolutionManagement {
 rootProject.name = "componentbase"
 include ':app'
 include ':componentbase'
+include ':login'
+include ':share'
+include ':base'
