@@ -1,32 +1,17 @@
-if(isModule.toBoolean()){
-    apply plugin: 'com.android.application'
-}else{
-    apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
 }
-
-
-/*android {
+android {
     compileSdk 32
 
     defaultConfig {
-        if(isModule.toBoolean()){
-            applicationId "com.example.share"
-        }
         minSdk 21
         targetSdk 32
-        versionCode 1
-        versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
-    sourceSets{
-        main{
-            if(isModule.toBoolean()){
-                manifest.srcFile 'src/main/moduleManifest/AndroidManifset.xml'
-            }else{
-                manifest.srcFile 'src/main/AndroidManifest.xml'
-            }
-        }
-    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -37,11 +22,14 @@ if(isModule.toBoolean()){
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-}*/
-
+}
+//创建一个library ，这里命名为Baselibs
+//在模块的build.gradle中，添加我们刚刚写的依赖，注意这里运用了关键字api来添加
+// 因为这样做，别的模块继承当前模块的时候，不必再单独写依赖了。
 dependencies {
-
-    implementation project(":Baselibs")
+    api rootProject.ext.androidxLibs
+/*    api rootProject.ext.commonLibs
+    api rootProject.ext.annotationLibs*/
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
