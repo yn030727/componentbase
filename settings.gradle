@@ -3,11 +3,6 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
-        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
-        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
-        maven { url 'https://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
-        maven { url "https://jitpack.io" }
     }
 }
 
@@ -16,16 +11,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
-        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
-        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
-        maven { url 'https://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
-        maven { url "https://jitpack.io" }
+
     }
 }
 rootProject.name = "componentbase"
 include ':app'
-include ':componentbase'
 include ':login'
 include ':share'
 include ':base'

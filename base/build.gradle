@@ -21,13 +21,12 @@ android {
     sourceSets{
         main{
             if(isModule.toBoolean()){
-                manifest.srcFile 'src/main/moduleManifest/AndroidManifset.xml'
+                manifest.srcFile 'src/main/moduleManifest/AndroidManifest.xml'
             }else{
                 manifest.srcFile 'src/main/AndroidManifest.xml'
             }
         }
     }
-
     buildTypes {
         release {
             minifyEnabled false

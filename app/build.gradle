@@ -29,6 +29,7 @@ android {
 
 dependencies {
     implementation project(":Baselibs")
+    //只需要在app模块(壳工程)的build.gradle中根据isModule的值来决定是否添加其他组件的模块就好了
     if(!isModule.toBoolean()){
         implementation project(":login")
         implementation project(":share")
