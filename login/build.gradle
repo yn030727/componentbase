@@ -5,7 +5,7 @@ if(isModule.toBoolean()){
 }
 
 
-/*android {
+android {
     compileSdk 32
 
     defaultConfig {
@@ -37,7 +37,7 @@ if(isModule.toBoolean()){
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-}*/
+}
 
 dependencies {
 
