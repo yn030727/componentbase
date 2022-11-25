@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+
+@Route(path="/share/share1")
 public class ShareActivity extends AppCompatActivity {
 
     @Override
