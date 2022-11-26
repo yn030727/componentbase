@@ -21,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ARouter.getInstance().build("/login/login1").navigation();
+                ARouter.getInstance().build("/share/share1").navigation();
             }
         });
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ARouter.getInstance().build("/share/share1").navigation();
+                ARouter.getInstance().build("/login/login1").navigation();
             }
         });
         base.setOnClickListener(new View.OnClickListener() {
