@@ -14,9 +14,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button share=findViewById(R.id.shareBtn);
-        Button login=findViewById(R.id.loginBtn);
-        Button base=findViewById(R.id.baseBtn);
+        Button share = findViewById(R.id.shareBtn);
+        Button login = findViewById(R.id.loginBtn);
+        Button base = findViewById(R.id.baseBtn);
+        Button mine = findViewById(R.id.mineBtn);
         //通过两个按钮发起跳转指令
         share.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ARouter.getInstance().build("/base/base1").navigation();
+            }
+        });
+        mine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ARouter.getInstance().build("/mine/mine1").navigation();
             }
         });
     }

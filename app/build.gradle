@@ -39,6 +39,7 @@ dependencies {
         implementation project(":login")
         implementation project(":share")
         implementation project(":base")
+        implementation project(":mine")
     }
     implementation fileTree(dir:"libs",include:['*.jar'])
     testImplementation 'junit:junit:4.13.2'
